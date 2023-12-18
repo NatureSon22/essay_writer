@@ -17,10 +17,11 @@ export default function FieldInput({essay : {essay}, getEssay, getData}) {
                  'X-RapidAPI-Host': 'open-ai25.p.rapidapi.com'
             },
             body: JSON.stringify({
-                query: `Generate an essay on ${data.topic} in ${data.language} with a focus on ${data.type}. 
-                Include at least three paragraphs covering key points. 
-                Add escape literal(\n) for each section
-                `
+                query: `Compose a comprehensive essay exploring the intricacies of the topic "${data.topic}" in ${data.language}. 
+                    The emphasis should be on the writing style of ${data.type}. 
+                    Your essay should consist of a minimum of three paragraphs, each delving into key aspects of the subject. 
+                    Please ensure clarity and coherence in your writing, and use escape literals (\n) to create distinct sections.
+                    `
             })
         };
 
