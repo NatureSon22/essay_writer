@@ -10,7 +10,7 @@ export default function NavBar() {
                 <p>write_me</p>
             </div>
             
-            <a className="header-link" href="/">
+            <a className="header-link" href="https://github.com/NatureSon22/essay_writer">
                 <FontAwesomeIcon icon={faGithub} />
             </a>
         </header>
