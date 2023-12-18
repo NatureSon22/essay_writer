@@ -29,12 +29,7 @@ export default function FieldInput({essay : {essay}, getEssay, getData}) {
             const response = await fetch(url, options);
             const resData = await response.json();
             const resultString = resData.response;
-            getEssay({ title: data.topic, essay: resultString });
-
-            // getEssay( {
-            //    "title": "Question: Yoasobi",
-            //    "essay": "Yoasobi is a Japanese pop rock band formed in 2008 by two high school classmates, Yoho and Yoshitaka, in Tokyo, Japan. They are known for their catchy melodies and emotional lyrics that often deal with the struggles and triumphs of adolescence. Their debut single \"Kimi to Boku\" quickly became a hit, reaching the top of the Oricon charts and earning them a large following among teenagers. Since then, Yoasobi has released numerous singles, EPs, and albums, including their debut full-length album \"Hikari\" in 2010 and their second full-length album \"Morning Sun\" in 2012.\n\nThe band's music style is characterized by its use of electric guitars, keyboards, and drums, with Yoho playing lead vocals and Yoshitaka providing backing vocals and rhythm guitar. Their sound is often compared to that of other Japanese pop rock bands such as Utada Hikaru and Ayumi Hamasaki, but with a unique twist that sets them apart. In addition to their music, Yoasobi is also known for their energetic live performances and their close relationship with their fans, often interacting with them through social media and live events.\n\nDespite their success, Yoasobi faced several challenges throughout their career, including the loss of their lead guitarist in 2011 and the cancellation of their tour in 2015 due to Yoho's health issues. However, they have continued to persevere, releasing new music and going on tour whenever possible. In 2019, they released their third full-length album \"Sakura\" to critical and commercial success, with the lead single \"Morizo no Uta\" becoming their highest-charting song to date.\n\nOverall, Yoasobi is a talented and dedicated band that has captured the hearts of millions of fans around the world with their catchy music and heartfelt lyrics. Their story is a testament to the power of friendship and determination in the face of adversity, and their music continues to inspire and uplift listeners of all ages."
-            // } )
+            getEssay({ title: `Question: ${data.topic}`, essay: resultString });
         } catch (error) {
             getEssay({ title: 'Error', essay: 'Sorry, an error occurred while generating the essay. Please try again.' });
         }
