@@ -12,9 +12,9 @@ export default function FieldInput({essay : {essay}, getEssay, getData}) {
         const options = {
             method: 'POST',
             headers: {
-                'content-type': 'application/json',
-                'X-RapidAPI-Key': 'f9a5d4a052mshe3fa0b8198e125cp1846f6jsn88c6ca178a3a',
-                'X-RapidAPI-Host': 'open-ai25.p.rapidapi.com'
+                 'content-type': 'application/json',
+                 'X-RapidAPI-Key': '089a375889msh9a6ad90ff7acc20p1e31e9jsn9fb3e9157935',
+                 'X-RapidAPI-Host': 'open-ai25.p.rapidapi.com'
             },
             body: JSON.stringify({
                 query: `Generate an essay on ${data.topic} in ${data.language} with a focus on ${data.type}. 
